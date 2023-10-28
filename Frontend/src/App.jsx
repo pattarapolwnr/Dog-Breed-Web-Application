@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="flex items-center justify-center min-h-screen">
         {/* Card container */}
-        <div className="relative flex flex-col m-6 shadow-2xl rounded-2xl bg-white  px-6 py-6 w-11/12 md:w-4/5">
+        <div className="relative flex flex-col m-6 shadow-2xl rounded-2xl bg-white  px-6 py-6 w-11/12 md:w-4/5 xl:w-3/5">
           {/* Title */}
           <div className="flex flex-col md:flex-row justify-start items-center">
             <img src="/images/siit_logo.png" className="lg:mr-32" />
