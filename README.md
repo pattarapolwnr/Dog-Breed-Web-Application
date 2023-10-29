@@ -1,6 +1,7 @@
 # Dog Breed Classification Web Application!
 
 Frontend : React.js
+
 Backend : Flask
 
 # Requirements
@@ -30,6 +31,8 @@ npm run dev
 !wget -q https://gitlab.com/atlonxp/siit-deep-learning/-/raw/main/lfw.zip -O lfw.zip
 
 !wget -q https://gitlab.com/atlonxp/siit-deep-learning/-/raw/main/DogXceptionData.npz -O bottleneck_features/DogXceptionData.npz
+
+# Yolo
 
 !wget "https://pjreddie.com/media/files/yolov3.weights"
 
