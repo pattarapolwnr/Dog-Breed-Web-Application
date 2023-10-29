@@ -1,6 +1,6 @@
 # Dog Breed Classification Web Application!
 
-Frontend : React.js (https://dog--bleed-classification.netlify.app)
+Frontend : React.js (https://dog-bleed-classification.netlify.app)
 
 Backend : Flask
 
@@ -14,7 +14,7 @@ You need to install **Node.js**.
 
 Install necessary dependencies for the frontend React.js and run the development server for frontend.
 You can also use this deployed web for the frontend. 
-URL: (https://dog--bleed-classification.netlify.app)
+URL: (https://dog-bleed-classification.netlify.app)
 
 ```bash
 cd Frontend
