@@ -1,10 +1,11 @@
-import './App.css';
+// import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-function App() {
+function Root() {
   const [selectedFile, setSelectedFile] = useState();
   const [preview, setPreview] = useState();
   const [data, setData] = useState('');
@@ -73,9 +74,11 @@ function App() {
             <h1 className="font-sbld text-3xl text-center text-transparent h-20 md:h-12 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ">
               Dog Bleed Classification
             </h1>
-            <h5 className="font-lgt text-base text-textPrimary text-center">
-              Go to snapchatFilter
-            </h5>
+            <Link to="/live_webcam">
+              <button className="md:ml-24 bg-secondary rounded-xl w-48 px-1 py-4 border-2 border-white text-white transition ease-in-out delay-75 hover:border-secondary hover:text-secondary hover:bg-white">
+                Try Snapchat filter here!
+              </button>
+            </Link>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center items-center my-10 space-y-8 md:space-y-0 md:my-10 md:space-x-20">
@@ -154,4 +157,4 @@ function App() {
   );
 }
 
-export default App;
+export default Root;
