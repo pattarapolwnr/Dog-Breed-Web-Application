@@ -39,12 +39,52 @@ def extract_Xception(tensor):
     return Xception(weights='imagenet', include_top=False).predict(preprocess_input(tensor))
 
 
+# def predict_dog_breed(img_path):
+#     model = create_model()
+#     model.load_weights('best_model.hdf5')
+#     bottleneck_feature = extract_Xception(path_to_tensor(img_path))
+#     predicted_vector = model.predict(bottleneck_feature)
+#     return dog_names[np.argmax(predicted_vector)]
+
+# def predict_dog_breed(img_path):
+#     model = create_model()
+#     model.load_weights('best_model.hdf5')
+#     bottleneck_feature = extract_Xception(path_to_tensor(img_path))
+#     predicted_vector = model.predict(bottleneck_feature)
+
+#     threshold = 0.4
+
+#     high_prob_indices = np.where(predicted_vector >= threshold)[1]
+
+#     if len(high_prob_indices) == 0:
+#         return dog_names[np.argmax(predicted_vector)]
+
+#     elif len(high_prob_indices) == 1:
+#         return dog_names[high_prob_indices[0]]
+
+#     else:
+#         return ', '.join([dog_names[idx] for idx in high_prob_indices])
+
 def predict_dog_breed(img_path):
     model = create_model()
     model.load_weights('best_model.hdf5')
     bottleneck_feature = extract_Xception(path_to_tensor(img_path))
     predicted_vector = model.predict(bottleneck_feature)
-    return dog_names[np.argmax(predicted_vector)]
+
+    threshold = 0.1
+
+    high_prob_indices = np.where(predicted_vector >= threshold)[1]
+    high_prob_values = predicted_vector[0][high_prob_indices]
+
+    if len(high_prob_indices) == 0:
+        max_idx = np.argmax(predicted_vector)
+        return f"{dog_names[max_idx]} with confidence {predicted_vector[0][max_idx]:.2f}"
+
+    elif len(high_prob_indices) == 1:
+        return f"{dog_names[high_prob_indices[0]]} with confidence {high_prob_values[0]:.2f}"
+
+    else:
+        return ', '.join([f"{dog_names[idx]} ({predicted_vector[0][idx]:.2f})" for idx in high_prob_indices])
 
 
 def yolo(image_path):

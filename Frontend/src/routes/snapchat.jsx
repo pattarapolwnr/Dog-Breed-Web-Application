@@ -27,7 +27,7 @@ function Snapchat() {
           <div className="flex flex-col md:flex-row justify-center items-center my-10 space-y-8 md:space-y-0 md:my-10 md:space-x-20">
             {/* Image Preview Section */}
             <div className="flex flex-col justify-center space-y-4">
-              <img src={'http://localhost:5000/video_feed'} width={300} />
+              <img src={'http://localhost:5000/video_feed'} width={500} />
               <h5 className="font-lgt text-base text-textPrimary text-center">
                 Live Webcam Preview
               </h5>
