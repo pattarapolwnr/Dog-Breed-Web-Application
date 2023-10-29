@@ -22,6 +22,28 @@ npm run dev
 
 ```
 
+## Download datasets
+
+```bash
+!wget -q https://gitlab.com/atlonxp/siit-deep-learning/-/raw/main/dogImages.zip -O dogImages.zip
+
+!wget -q https://gitlab.com/atlonxp/siit-deep-learning/-/raw/main/lfw.zip -O lfw.zip
+
+!wget -q https://gitlab.com/atlonxp/siit-deep-learning/-/raw/main/DogXceptionData.npz -O bottleneck_features/DogXceptionData.npz
+
+!wget "https://pjreddie.com/media/files/yolov3.weights"
+
+!wget "https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg"
+```
+
+# Unzip datasets
+
+```bash
+!unzip -qq dogImages.zip
+!unzip -qq lfw.zip
+!rm -rf __MACOSX/
+```
+
 ## Getting Started for Backend
 
 Install necessary dependencies for the backend Flask and run the development server for backend
@@ -43,8 +65,11 @@ python server.py
 ## **Team and Contribution**
 
 Pattarapol Wangnirun 6322770981
+
 Boonyakorn Rathasamuth 6322771047
+
 Kanyapat Thanee 6322771427
+
 Theerawuth Udomponglukkana 6322772516
 
 **Department of Information, Computer and Communication Technology (ICT), Sirindhorn International Institute of Technology (SIIT), Thammasat University, Khlong Luang, Pathum Thani, Thailand**
