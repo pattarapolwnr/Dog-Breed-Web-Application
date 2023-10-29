@@ -4,6 +4,8 @@ Frontend : React.js
 
 Backend : Flask
 
+Demo video : https://drive.google.com/file/d/1UxvlkybvP0toHH31I4yPQ4FWOsWAhFKh/view?usp=drive_link
+
 # Requirements
 
 You need to install **Node.js**.
