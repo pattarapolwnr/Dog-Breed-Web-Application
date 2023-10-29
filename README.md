@@ -1,10 +1,10 @@
 # Dog Breed Classification Web Application!
 
-Frontend : React.js
+Frontend : React.js (https://dog--bleed-classification.netlify.app)
 
 Backend : Flask
 
-Demo video : https://drive.google.com/file/d/1UxvlkybvP0toHH31I4yPQ4FWOsWAhFKh/view?usp=drive_link
+Demo video : https://drive.google.com/file/d/1BZGSqmgK2kHXNFoz5YvToSFUmD0jgRa7/view?usp=sharing
 
 # Requirements
 
@@ -13,6 +13,8 @@ You need to install **Node.js**.
 ## Getting Started for Frontend
 
 Install necessary dependencies for the frontend React.js and run the development server for frontend.
+You can also use this deployed web for the frontend. 
+URL: (https://dog--bleed-classification.netlify.app)
 
 ```bash
 cd Frontend
